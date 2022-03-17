@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:ital,wght@1,300&display=swap');
+
 :root{
   /* cores */
-  --blue: #1B75BC;
+  --primaryColor: #1B75BC;
+  --backgroundColor: #CCCCCC;
 
   /* fontes */
-  --font: 'Source Sans Pro', sans-serif;
-
+  --fontParagraph: 'Source Sans Pro', sans-serif;
+  --fontWriting: 'Kaushan Script', cursive;
+  --fontSubtitle: 'Poppins', sans-serif;
 }
 
 *{
