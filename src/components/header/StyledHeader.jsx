@@ -9,7 +9,7 @@ export const Container = styled.div`
    justify-content: center;
 
    img{
-      width: 15%;
+      width: 250px;
       height: 80%;
    }
 `;
