@@ -21,7 +21,7 @@ const Home = () => {
       <>
          <Header />
          <SectionImage />
-         <SectionListas carros={carros} motos={motos} caminhoes={caminhoes} />
+         <SectionListas carros={carros} motos={motos} caminhoes={caminhoes}/>
       </>
    );
 };

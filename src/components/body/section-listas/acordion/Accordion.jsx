@@ -1,8 +1,9 @@
 import React from "react";
 import Loading from "../../../loading/Loading";
+import { Link } from "react-router-dom"
 
 const Accordion = ({ carros, motos, caminhoes }) => {
-   console.log(carros)
+
    return (
       <>
          {carros.length == 0 ? (
@@ -12,11 +13,11 @@ const Accordion = ({ carros, motos, caminhoes }) => {
                <div className="accordion-item">
                   <h2 className="accordion-header" id="headingOne">
                      <button
-                        className="accordion-button"
+                        className="accordion-button collapsed"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseOne"
-                        aria-expanded="true"
+                        aria-expanded="false"
                         aria-controls="collapseOne"
                      >
                         Carros
@@ -24,7 +25,7 @@ const Accordion = ({ carros, motos, caminhoes }) => {
                   </h2>
                   <div
                      id="collapseOne"
-                     className="accordion-collapse collapse show"
+                     className="accordion-collapse collapse"
                      aria-labelledby="headingOne"
                      data-bs-parent="#accordionExample"
                   >
@@ -32,9 +33,11 @@ const Accordion = ({ carros, motos, caminhoes }) => {
                         <ul className="listaVeiculos">
                            {carros.map((carro, index) => {
                               return (
-                                 <li key={index} id={carro.codigo}>
-                                    {carro.nome}
-                                 </li>
+                                 <Link to={`/veiculos/carros/${carro.codigo}`}>
+                                    <li key={index}>
+                                       {carro.nome}
+                                    </li>
+                                 </Link>
                               );
                            })}
                         </ul>
@@ -62,11 +65,13 @@ const Accordion = ({ carros, motos, caminhoes }) => {
                   >
                      <div className="accordion-body">
                         <ul className="listaVeiculos">
-                           {motos.map((motos, index) => {
+                           {motos.map((moto, index) => {
                               return (
-                                 <li key={index} id={motos.codigo}>
-                                    {motos.nome}
-                                 </li>
+                                 <Link to={`/veiculos/motos/${moto.codigo}`}>
+                                    <li key={index}>
+                                       {moto.nome}
+                                    </li>
+                                 </Link>
                               );
                            })}
                         </ul>
@@ -94,11 +99,13 @@ const Accordion = ({ carros, motos, caminhoes }) => {
                   >
                      <div className="accordion-body">
                         <ul className="listaVeiculos">
-                           {caminhoes.map((caminhoes, index) => {
+                           {caminhoes.map((caminhao, index) => {
                               return (
-                                 <li key={index} id={caminhoes.codigo}>
-                                    {caminhoes.nome}
-                                 </li>
+                                 <Link to={`/veiculos/caminhoes/${caminhao.codigo}`}>
+                                    <li key={index}>
+                                       {caminhao.nome}
+                                    </li>
+                                 </Link>
                               );
                            })}
                         </ul>

@@ -3,13 +3,15 @@ import Title from '../../components/body/title/Title';
 import React, { useEffect, useState } from "react";
 import { api } from "../../services/api";
 import Header from "../../components/header/Header";
+import { useParams } from 'react-router';
 
-const Veiculos = () => {
+const Veiculos = (props) => {
 
    const [veiculos, setVeiculos] = useState([]);
+   const {tipo, id} = useParams()
 
    useEffect(() => {
-      api.get("/carros/marcas/59/modelos").then((response) => {
+      api.get(`/${tipo}/marcas/${id}/modelos`).then((response) => {
          const veiculos = response.data.modelos;
          const veiculosOrdemInversa = veiculos.reverse()
          setVeiculos(veiculosOrdemInversa);
