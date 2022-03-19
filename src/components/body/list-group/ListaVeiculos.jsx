@@ -1,0 +1,32 @@
+import React from "react";
+import Loading from "../../loading/Loading";
+import * as Styled from './StyledListaVeiculos'
+
+const ListaVeiculos = ({veiculos}) => {
+
+   return (
+      <Styled.Container>
+         <h3>Veiculos do Fabricante</h3>
+         <div class="list-group">
+            {veiculos.length == 0 ?
+               <Loading />
+            :
+               veiculos.map((veiculo, index) => {
+                  return (
+                     <button
+                        type="button"
+                        class="list-group-item list-group-item-action"
+                        aria-current="true"
+                        id={veiculo.codigo}
+                     >
+                        {veiculo.nome}
+                     </button>
+                  )
+               })
+            }            
+         </div>
+      </Styled.Container>
+   );
+};
+
+export default ListaVeiculos;
