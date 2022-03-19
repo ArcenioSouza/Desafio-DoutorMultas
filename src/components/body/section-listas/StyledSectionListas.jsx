@@ -10,7 +10,7 @@ export const Container = styled.div`
    flex-direction: column;
 
    .accordion {
-      width: 80%;
+      width: 90%;
    }
 
    .accordion-button {

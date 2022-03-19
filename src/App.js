@@ -1,13 +1,9 @@
-import Header from "./components/header/Header"
-import SectionImage from "./components/body/section-image/SectionImage";
-import SectionListas from "./components/body/section-listas/SectionListas";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
     <>
-      <Header />
-      <SectionImage />
-      <SectionListas />
+      <Home />
     </>
   );
 }
