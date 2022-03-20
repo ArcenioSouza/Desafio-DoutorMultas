@@ -1,13 +1,16 @@
-import Header from "./components/header/Header"
-import SectionImage from "./components/body/section-image/SectionImage";
-import SectionListas from "./components/body/section-listas/SectionListas";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Home from "./pages/home/Home";
+import Veiculos from "./pages/veiculos/Veiculos";
 
 function App() {
   return (
     <>
-      <Header />
-      <SectionImage />
-      <SectionListas />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/veiculos/:tipo/:id" element={<Veiculos/>}/>
+        </Routes>      
+      </BrowserRouter>
     </>
   );
 }

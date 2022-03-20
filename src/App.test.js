@@ -1,8 +1,13 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { api } from './services/api';
+import request from 'supertest';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+
+describe('Verifica se requisições estão sendo feitas com sucesso', () => {
+  it('Verifica requisição de marcas', async () => {
+    const res = await request(api).get('/carros/marcas')
+    jest.setTimeout(3000)
+    expect(res.statusCode).toEqual(200)
+    expect(res.body).toHaveProperty('nome')
+  })
+
+})

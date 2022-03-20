@@ -1,12 +1,14 @@
 import React from "react";
 import Accordion from "./acordion/Accordion";
-import * as Styled from "./StyledSectionListas"
+import * as Styled from "./StyledSectionListas";
 
-const SectionListas = () => {
-   const lista = ["Prisma", "Corsa", "Honda Civic", "HB20"]
+
+const SectionListas = ({carros, motos, caminhoes}) => {
+   
+
    return (
-      <Styled.Container>
-         <Accordion />
+      <Styled.Container>         
+         <Accordion carros={carros} motos={motos} caminhoes={caminhoes} />         
       </Styled.Container>
    );
 };

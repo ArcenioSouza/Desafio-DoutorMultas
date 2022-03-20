@@ -10,7 +10,7 @@ export const Container = styled.div`
    flex-direction: column;
 
    .accordion {
-      width: 80%;
+      width: 90%;
    }
 
    .accordion-button {
@@ -18,5 +18,19 @@ export const Container = styled.div`
       color: #fff;
       font-size: 1.2rem;
       font-weight: bold;
+   }
+
+   .listaVeiculos{
+      list-style: none;
+      width: 100%;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+   }
+
+   .listaVeiculos li:hover{
+      cursor: pointer;
+      text-decoration: underline;
    }
 `;
