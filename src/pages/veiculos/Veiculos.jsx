@@ -5,7 +5,7 @@ import { api } from "../../services/api";
 import Header from "../../components/header/Header";
 import { useParams } from 'react-router';
 
-const Veiculos = (props) => {
+const Veiculos = () => {
 
    const [veiculos, setVeiculos] = useState([]);
    const {tipo, id} = useParams()

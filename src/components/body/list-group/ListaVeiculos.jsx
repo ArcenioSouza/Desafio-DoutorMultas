@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Loading from "../../loading/Loading";
 import * as Styled from './StyledListaVeiculos'
 
@@ -25,6 +26,7 @@ const ListaVeiculos = ({veiculos}) => {
                })
             }            
          </div>
+         <Link to="/"><button type="button" class="btn btn-primary">Voltar</button></Link>
       </Styled.Container>
    );
 };

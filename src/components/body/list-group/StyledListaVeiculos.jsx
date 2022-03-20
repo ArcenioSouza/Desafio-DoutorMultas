@@ -1,18 +1,23 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-   width: 30%;
+   width: 100%;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   margin: 2%;
+   margin: 1%;
+   text-align: center;
 
    .list-group{
-      width: 100%;
+      width: 80%;
       height: 400px;
       overflow-y: scroll;
       border: 1px solid var(--primaryColor);
+      margin: 1%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
    }
 
    h3{
