@@ -9,7 +9,7 @@ const ListaVeiculos = ({veiculos}) => {
       <Styled.Container>
          <h3>Veiculos do Fabricante</h3>
          <div class="list-group">
-            {veiculos.length == 0 ?
+            {veiculos.length === 0 ?
                <Loading />
             :
                veiculos.map((veiculo, index) => {

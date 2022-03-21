@@ -6,7 +6,7 @@ const Accordion = ({ carros, motos, caminhoes }) => {
 
    return (
       <>
-         {carros.length == 0 ? (
+         {carros.length === 0 ? (
             <Loading type={"Spin"} color={"#0000"} />
          ) : (
             <div className="accordion" id="accordionExample">

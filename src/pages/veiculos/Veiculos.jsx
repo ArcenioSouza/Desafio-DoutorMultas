@@ -8,9 +8,10 @@ import { useParams } from 'react-router';
 const Veiculos = () => {
 
    const [veiculos, setVeiculos] = useState([]);
-   const {tipo, id} = useParams()
 
    useEffect(() => {
+      const {tipo, id} = useParams()
+      
       api.get(`/${tipo}/marcas/${id}/modelos`).then((response) => {
          const veiculos = response.data.modelos;
          const veiculosOrdemInversa = veiculos.reverse()
