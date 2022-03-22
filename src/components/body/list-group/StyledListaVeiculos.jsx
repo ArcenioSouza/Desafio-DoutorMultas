@@ -16,7 +16,7 @@ export const Container = styled.div`
       border: 1px solid var(--primaryColor);
       margin: 1%;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
    }
 
@@ -24,5 +24,4 @@ export const Container = styled.div`
       font-family: var(--fontSubtitle);
       font-size: 1.5rem;
    }
-
 `;

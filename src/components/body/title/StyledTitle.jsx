@@ -7,7 +7,7 @@ export const Container = styled.div`
    align-items: center;
    justify-content: center;
 
-   .pageTitle{
+   .pageTitle {
       height: 100%;
       width: 100%;
       display: flex;
@@ -16,14 +16,21 @@ export const Container = styled.div`
       flex-direction: column;
    }
 
-   h2{
+   h2 {
       font-family: var(--fontWriting);
       font-size: 4rem;
+      margin-top: -20px;
       color: var(--primaryColor);
    }
 
-   h3{
+   h3 {
       font-family: var(--fontSubtitle);
       font-size: 1.5rem;
+   }
+
+   @media (max-width: 850px) {
+      h2 {
+         font-size: 4rem;
+      }
    }
 `;

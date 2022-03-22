@@ -20,7 +20,7 @@ export const Container = styled.div`
       font-weight: bold;
    }
 
-   .listaVeiculos{
+   .listaVeiculos {
       list-style: none;
       width: 100%;
       height: 300px;
@@ -29,8 +29,21 @@ export const Container = styled.div`
       flex-wrap: wrap;
    }
 
-   .listaVeiculos li:hover{
-      cursor: pointer;
-      text-decoration: underline;
+   @media (max-width: 1000px) {
+      .listaVeiculos {
+         height: 800px;
+      }
+   }
+
+   @media (max-width: 600px) {
+      .listaVeiculos {
+         height: 1200px;
+      }
+   }
+
+   @media (max-width: 470px) {
+      .listaVeiculos {
+         height: auto;
+      }
    }
 `;

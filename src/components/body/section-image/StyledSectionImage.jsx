@@ -31,4 +31,18 @@ export const Container = styled.div`
       font-family: var(--fontSubtitle);
       font-size: 1.5rem;
    }
+
+   @media(max-width: 850px){
+
+      height: 250px;
+
+      img{
+         display: none;
+      }
+
+      h2{
+         bottom: 15px;
+         left: 10px;
+      }
+   }
 `;

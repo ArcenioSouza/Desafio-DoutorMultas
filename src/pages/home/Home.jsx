@@ -3,6 +3,7 @@ import { api } from "../../services/api";
 import Header from "../../components/header/Header";
 import SectionImage from "../../components/body/section-image/SectionImage";
 import SectionListas from "../../components/body/section-listas/SectionListas";
+import GustavoFonseca from '../../assets/img/gustavoFonseca.png'
 
 const Home = () => {
    const [carros, setCarros] = useState([]);
@@ -20,7 +21,10 @@ const Home = () => {
    return (
       <>
          <Header />
-         <SectionImage />
+         <SectionImage 
+            img={GustavoFonseca} 
+            titleLineOne={"Pesquise aqui o"}
+            titleLineTwo={"seu veículo"}/>
          <SectionListas carros={carros} motos={motos} caminhoes={caminhoes}/>
       </>
    );

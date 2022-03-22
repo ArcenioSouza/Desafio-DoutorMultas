@@ -22,7 +22,9 @@ const Veiculos = () => {
   return (
     <>
       <Header />
-      <Title />
+      <Title 
+      titleLineOne={"Encontre aqui, tudo sobre"}
+      titleLineTwo={"o seu veículo"}/>
       <ListaVeiculos veiculos={veiculos}/>
     </>
   )
