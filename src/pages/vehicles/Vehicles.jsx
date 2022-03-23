@@ -1,11 +1,11 @@
-import ListaVeiculos from '../../components/body/list-group/ListaVeiculos';
-import Title from '../../components/body/title/Title';
+import VehicleList from '../../components/vehicle-list/VehicleList';
+import Title from '../../components/title/Title';
 import React, { useEffect, useState } from "react";
 import { api } from "../../services/api";
-import Header from "../../components/header/Header";
+import Navbar from "../../components/navbar/Navbar";
 import { useParams } from 'react-router';
 
-const Veiculos = () => {
+const Vehicles = () => {
 
    const [veiculos, setVeiculos] = useState([]);
 
@@ -21,13 +21,13 @@ const Veiculos = () => {
 
   return (
     <>
-      <Header />
+      <Navbar src='https://doutormultas.com.br/wp-content/uploads/2018/02/doutor-multas-logotipo.png'/>
       <Title 
       titleLineOne={"Encontre aqui, tudo sobre"}
       titleLineTwo={"o seu veículo"}/>
-      <ListaVeiculos veiculos={veiculos}/>
+      <VehicleList veiculos={veiculos}/>
     </>
   )
 }
 
-export default Veiculos
+export default Vehicles;

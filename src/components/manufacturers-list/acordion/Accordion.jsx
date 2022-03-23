@@ -1,5 +1,5 @@
 import React from "react";
-import Loading from "../../../loading/Loading";
+import Loading from "../../loading/Loading";
 import { Link } from "react-router-dom"
 
 const Accordion = ({ carros, motos, caminhoes }) => {

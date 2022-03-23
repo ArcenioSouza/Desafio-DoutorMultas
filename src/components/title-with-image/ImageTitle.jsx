@@ -1,7 +1,7 @@
 import React from 'react'
-import * as Styled from './StyledSectionImage.jsx'
+import * as Styled from './StyledImageTitle.jsx'
 
-const SectionImage = (props) => {
+const ImageTitle = (props) => {
   return (
     <Styled.Container>
        <img src={props.img} alt="Foto do proprietario da empresa Doutor Multas apontando para a frase pesquise aqui o seu veículo" />
@@ -13,4 +13,4 @@ const SectionImage = (props) => {
   )
 }
 
-export default SectionImage;
+export default ImageTitle;

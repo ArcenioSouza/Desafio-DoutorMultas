@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { api } from "../../services/api";
-import Header from "../../components/header/Header";
-import SectionImage from "../../components/body/section-image/SectionImage";
-import SectionListas from "../../components/body/section-listas/SectionListas";
+import Navbar from "../../components/navbar/Navbar";
+import ImageTitle from "../../components/title-with-image/ImageTitle";
+import ManufacturersList from "../../components/manufacturers-list/ManufacturersList";
 import GustavoFonseca from '../../assets/img/gustavoFonseca.png'
 
 const Home = () => {
@@ -20,12 +20,12 @@ const Home = () => {
 
    return (
       <>
-         <Header />
-         <SectionImage 
+         <Navbar src='https://doutormultas.com.br/wp-content/uploads/2018/02/doutor-multas-logotipo.png' />
+         <ImageTitle 
             img={GustavoFonseca} 
             titleLineOne={"Pesquise aqui o"}
             titleLineTwo={"seu veículo"}/>
-         <SectionListas carros={carros} motos={motos} caminhoes={caminhoes}/>
+         <ManufacturersList carros={carros} motos={motos} caminhoes={caminhoes}/>
       </>
    );
 };

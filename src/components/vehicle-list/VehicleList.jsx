@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Loading from "../../loading/Loading";
-import * as Styled from './StyledListaVeiculos'
+import Loading from "../loading/Loading";
+import * as Styled from './StyledVehicleList'
 
-const ListaVeiculos = ({veiculos}) => {
+const VehicleList = ({veiculos}) => {
 
    return (
       <Styled.Container>
@@ -31,4 +31,4 @@ const ListaVeiculos = ({veiculos}) => {
    );
 };
 
-export default ListaVeiculos;
+export default VehicleList;

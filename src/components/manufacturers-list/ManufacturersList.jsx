@@ -1,9 +1,9 @@
 import React from "react";
 import Accordion from "./acordion/Accordion";
-import * as Styled from "./StyledSectionListas";
+import * as Styled from "./StyledManufacturersList";
 
 
-const SectionListas = ({carros, motos, caminhoes}) => {
+const ManufacturersList = ({carros, motos, caminhoes}) => {
    
 
    return (
@@ -13,4 +13,4 @@ const SectionListas = ({carros, motos, caminhoes}) => {
    );
 };
 
-export default SectionListas;
+export default ManufacturersList;
